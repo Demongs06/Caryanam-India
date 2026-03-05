@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1772453805525,
+    "employeeId": 1772450797236,
+    "employeeName": "raj",
+    "type": "PL",
+    "startDate": "2026-03-02",
+    "endDate": "2026-03-02",
+    "reason": "pl",
+    "status": "Approved"
+  },
+  {
+    "id": 1772600804194,
+    "employeeId": 1772450797236,
+    "employeeName": "raj",
+    "type": "PL",
+    "startDate": "2026-03-04",
+    "endDate": "2026-03-06",
+    "reason": "pl",
+    "status": "Approved"
+  },
+  {
+    "id": 1772612064611,
+    "employeeId": 1772450759598,
+    "employeeName": "soham",
+    "type": "PL",
+    "startDate": "2026-03-05",
+    "endDate": "2026-03-06",
+    "reason": "To ask for paid leave, send a concise, formal email to your manager well in advance, clearly stating your requested dates, the reason (e.g., vacation, personal matter), and your coverage plan. Mention that you have completed pending tasks and have arranged for a colleague to handle urgent matters",
+    "status": "Approved"
+  }
+]

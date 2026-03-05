@@ -1,0 +1,45 @@
+[
+  {
+    "id": 999,
+    "name": "Admin",
+    "email": "admin@test.com",
+    "password": "admin123",
+    "role": "admin"
+  },
+  {
+    "id": 1772450759598,
+    "name": "soham",
+    "email": "soham@test.com",
+    "phone": "1234567890",
+    "address": "uran",
+    "password": "123456",
+    "role": "employee"
+  },
+  {
+    "id": 1772450797236,
+    "name": "raj",
+    "email": "raj@test.com",
+    "phone": "1122334455",
+    "address": "pune",
+    "password": "raj123",
+    "role": "employee"
+  },
+  {
+    "id": 1772450838243,
+    "name": "atish",
+    "email": "atish@test.com",
+    "phone": "1122334466",
+    "address": "panvel",
+    "password": "123456",
+    "role": "employee"
+  },
+  {
+    "id": 1772613224985,
+    "name": "ketan",
+    "email": "ketan@test.com",
+    "phone": "9977553311",
+    "address": "mumbai",
+    "password": "ketan123",
+    "role": "employee"
+  }
+]
