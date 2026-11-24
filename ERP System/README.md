@@ -22,7 +22,7 @@
    npm install
    ```
 
-2. Start the app
+2. Start the server
 
    ```bash
    node server.js
