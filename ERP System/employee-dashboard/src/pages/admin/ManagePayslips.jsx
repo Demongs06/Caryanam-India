@@ -124,6 +124,7 @@ export default function ManagePayslips() {
                     <a
                       href={p.fileUrl}
                       target="_blank"
+                      rel="noreferrer"
                       className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-medium"
                     >
                       View
