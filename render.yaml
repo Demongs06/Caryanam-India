@@ -1,0 +1,40 @@
+services:
+  - type: web
+    name: caryanam-hrms-api
+    runtime: node
+    plan: free
+    region: singapore
+    rootDir: "ERP System/backend"
+    buildCommand: npm install && npm test
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DEMO_MODE
+        value: "true"
+      - key: DEMO_ADMIN_NAME
+        value: Demo Admin
+      - key: MONGODB_URI
+        sync: false
+      - key: MONGODB_DB
+        value: hrms-demo
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CLIENT_URL
+        sync: false
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
+      - key: DEMO_ADMIN_EMAIL
+        sync: false
+      - key: DEMO_ADMIN_PASSWORD
+        sync: false
+      - key: DEMO_EMPLOYEE_EMAIL
+        sync: false
+      - key: DEMO_EMPLOYEE_PASSWORD
+        sync: false
