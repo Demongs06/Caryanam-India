@@ -39,7 +39,7 @@ const cloudinaryReady = Boolean(
   process.env.CLOUDINARY_API_SECRET
 );
 
-const mongoClient = new MongoClient(process.env.MONGODB_URI || "");
+let mongoClient;
 let db, employees, attendance, leaves, payslips, holidays;
 
 const newId = () => Date.now() * 1000 + randomInt(0, 1000);
@@ -385,6 +385,7 @@ async function start() {
   if (!process.env.MONGODB_URI) throw new Error("MONGODB_URI must be configured");
   if (!cloudinaryReady) console.warn("Cloudinary is not configured; payslip uploads are disabled.");
 
+  mongoClient = new MongoClient(process.env.MONGODB_URI);
   await mongoClient.connect();
   db = mongoClient.db(process.env.MONGODB_DB || "hrms");
   employees = db.collection("employees");
