@@ -44,9 +44,11 @@ let db, employees, attendance, leaves, payslips, holidays;
 
 const newId = () => Date.now() * 1000 + randomInt(0, 1000);
 const cleanText = (value) => typeof value === "string" ? value.trim() : "";
-const validDate = (value) =>
-  /^\d{4}-\d{2}-\d{2}$/.test(value) &&
-  !Number.isNaN(Date.parse(value + "T00:00:00.000Z"));
+const validDate = (value) => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const date = new Date(value + "T00:00:00.000Z");
+  return !Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === value;
+};
 
 const todayInIndia = () => new Intl.DateTimeFormat("en-CA", {
   timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit"
@@ -95,7 +97,7 @@ const uploadPdf = (buffer, publicId) => new Promise((resolve, reject) => {
 });
 
 const signedPayslipUrl = (publicId) => cloudinary.utils.private_download_url(
-  publicId, null, {
+  publicId, "pdf", {
     resource_type: "raw",
     type: "authenticated",
     expires_at: Math.floor(Date.now() / 1000) + 300,
