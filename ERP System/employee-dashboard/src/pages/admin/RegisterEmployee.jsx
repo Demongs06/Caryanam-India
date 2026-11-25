@@ -140,6 +140,8 @@ export default function RegisterEmployee() {
 
               <input
                 type={showPassword ? "text" : "password"}
+                minLength={8}
+                required
                 placeholder="Enter password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
